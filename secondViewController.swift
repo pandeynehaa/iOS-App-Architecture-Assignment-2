@@ -10,6 +10,8 @@ protocol SideSelectionDelegate: NSObject {
     func didTapChoice(image: UIImage)
 }
 
+
+
 class secondViewController: UIViewController {
 //MARK: variables
     weak var changeImage: SideSelectionDelegate!
@@ -20,19 +22,19 @@ class secondViewController: UIViewController {
 
       
     }
-//MARK: Protocol
+//MARK: PROTOCOL
     @IBAction func protocolButton(_ sender: UIButton) {
         changeImage?.didTapChoice(image: UIImage(imageLiteralResourceName: "inosuke"))
         navigationController?.popViewController(animated: true)
     }
     
-    //MARK: Notification
+    //MARK: NOTIFICATION
     @IBAction func notificationButton(_ sender: UIButton) {
         NotificationCenter.default.post(name: NSNotification.Name.init(rawValue: "NOTIFICATION_FIRE"),object:UIImage.kimi)
         navigationController?.popViewController(animated: true)
 
     }
-//   MARK: Closure
+//   MARK: ClOSURE
     @IBAction func closureButton(_ sender: Any) {
         guard let closuerss = closuerss else{
             return
@@ -42,6 +44,7 @@ class secondViewController: UIViewController {
 
     }
 }
+
 
 //MARK: Extensionss
 extension UIImage{

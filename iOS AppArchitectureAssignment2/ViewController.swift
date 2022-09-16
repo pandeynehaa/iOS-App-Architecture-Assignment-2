@@ -9,6 +9,10 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    //MARK: deinit
+    deinit {
+          NotificationCenter.default.removeObserver(self)
+      }
 
 //MARK: outlets
     @IBOutlet weak var mainImageView: UIImageView!
