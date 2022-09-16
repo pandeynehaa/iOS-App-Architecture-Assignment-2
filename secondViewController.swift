@@ -43,7 +43,7 @@ class secondViewController: UIViewController {
     }
 }
 
-//MARK: Extension
+//MARK: Extensionss
 extension UIImage{
     static let image = UIImage(named: "inosuke")!
     static let nosuke = UIImage(named: "nosuke")!
